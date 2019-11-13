@@ -12,6 +12,8 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i("TAG", "This is a log output");
+        ForecastFragment firstFragment = new ForecastFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.container, firstFragment).commit();
     }
 
     @Override
